@@ -1,0 +1,16 @@
+<div class="shell-layout">
+  <header class="shell-header">
+    <div class="shell-brand">
+      <span class="shell-logo">&#x1F695;</span>
+      <span class="shell-title">TaxiFleet Lima</span>
+    </div>
+    <nav class="shell-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/mapa" routerLinkActive="active">Mapa</a>
+    </nav>
+  </header>
+
+  <main class="shell-content">
+    <router-outlet />
+  </main>
+</div>
