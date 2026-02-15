@@ -1,0 +1,57 @@
+.shell-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.shell-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.shell-logo {
+  font-size: 1.5rem;
+}
+
+.shell-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.shell-nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.shell-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.shell-nav a.active {
+  background: #DD0031;
+  color: #fff;
+}
+
+.shell-content {
+  flex: 1;
+  padding: 24px;
+  background: #f5f5f5;
+}
