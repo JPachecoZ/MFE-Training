@@ -8,13 +8,13 @@
           <span class="mapa-driver">{{ unit.driver }}</span>
           @switch (unit.status) {
             @case ('activo') {
-              <span class="dot dot--activo"></span>
+              <span class="mapa-dot mapa-dot--activo"></span>
             }
             @case ('en_servicio') {
-              <span class="dot dot--en-servicio"></span>
+              <span class="mapa-dot mapa-dot--en-servicio"></span>
             }
             @case ('inactivo') {
-              <span class="dot dot--inactivo"></span>
+              <span class="mapa-dot mapa-dot--inactivo"></span>
             }
           }
         </div>

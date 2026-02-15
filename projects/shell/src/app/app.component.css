@@ -8,16 +8,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 var(--spacing-lg);
   height: 56px;
-  background: #1a1a2e;
+  background: var(--color-text);
   color: #fff;
 }
 
 .shell-brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--spacing-sm);
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -34,7 +34,7 @@
 .shell-nav a {
   color: #ccc;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 6px;
   font-weight: 500;
   transition: background 0.2s, color 0.2s;
@@ -46,12 +46,12 @@
 }
 
 .shell-nav a.active {
-  background: #DD0031;
+  background: var(--color-primary);
   color: #fff;
 }
 
 .shell-content {
   flex: 1;
-  padding: 24px;
-  background: #f5f5f5;
+  padding: var(--spacing-lg);
+  background: var(--color-bg);
 }
