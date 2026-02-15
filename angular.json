@@ -90,6 +90,97 @@
           }
         }
       }
+    },
+    "mapa": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/mapa",
+      "sourceRoot": "projects/mapa/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/mapa",
+            "index": "projects/mapa/src/index.html",
+            "browser": "projects/mapa/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/mapa/tsconfig.app.json",
+            "assets": [
+              "projects/mapa/src/favicon.ico",
+              "projects/mapa/src/assets"
+            ],
+            "styles": [
+              "projects/mapa/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "mapa:build:production"
+            },
+            "development": {
+              "buildTarget": "mapa:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4201
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "mapa:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/mapa/tsconfig.spec.json",
+            "assets": [
+              "projects/mapa/src/favicon.ico",
+              "projects/mapa/src/assets"
+            ],
+            "styles": [
+              "projects/mapa/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
