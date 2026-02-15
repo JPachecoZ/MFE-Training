@@ -1,0 +1,32 @@
+<div class="mapa-container">
+  <h2 class="mapa-title">Mapa de Unidades — Lima</h2>
+
+  <div class="mapa-grid">
+    @for (unit of units; track unit.id) {
+      <div class="mapa-card">
+        <div class="mapa-card-header">
+          <span class="mapa-driver">{{ unit.driver }}</span>
+          @switch (unit.status) {
+            @case ('activo') {
+              <span class="dot dot--activo"></span>
+            }
+            @case ('en_servicio') {
+              <span class="dot dot--en-servicio"></span>
+            }
+            @case ('inactivo') {
+              <span class="dot dot--inactivo"></span>
+            }
+          }
+        </div>
+
+        <div class="mapa-card-body">
+          <p class="mapa-plate">{{ unit.plate }}</p>
+          @if (unit.status) {
+            <p class="mapa-status">{{ getStatusLabel(unit.status) }}</p>
+          }
+          <p class="mapa-coords">{{ unit.lat }}, {{ unit.lng }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</div>
